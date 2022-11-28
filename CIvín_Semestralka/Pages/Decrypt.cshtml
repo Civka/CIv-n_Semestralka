@@ -1,0 +1,21 @@
+﻿@page
+@model CIvín_Semestralka.Pages.DecryptModel
+@{
+    ViewData["Title"] = "Dešifrovat";
+}
+
+<div class="container">
+    <form method="post">
+        <label>Šifra: </label><br />
+        <textarea asp-for="@Model.ItemPage.Cipher">@Model.ItemPage.Cipher</textarea><br />
+        <label>Klíč: </label><br />
+        <input asp-for="@Model.ItemPage.Key" type="number" value="@Model.ItemPage.Key" /><br />
+        <hr />
+        <button type="submit">Odeslat</button><br /><br />
+    </form>
+
+    <label>Text: </label><br />
+    <textarea>@Model.ItemPage.Text</textarea>
+    <hr />
+
+</div>
